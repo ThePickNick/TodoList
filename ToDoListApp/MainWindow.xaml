@@ -1,0 +1,32 @@
+﻿<Window WindowStartupLocation="CenterScreen" x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="800">
+    <Grid RenderTransformOrigin="0.5,0.5" Margin="0,0,-7,2">
+        <Button x:Name="button" Content="Mark As Done" HorizontalAlignment="center" Margin="291,650,348,0" VerticalAlignment="Top" Width="160" Click="Mark_as_Done" RenderTransformOrigin="0.703,12.375" Height="33"/>
+        <TextBlock Text="{Binding Path=LoginUser, UpdateSourceTrigger=PropertyChanged}" Margin="65,84,90,557" HorizontalAlignment="center" FontSize="40" Foreground="Navy" />
+
+        <DataGrid CanUserAddRows="false" Name="AddTaskData" HorizontalAlignment="Left" Margin="107,244,0,0" VerticalAlignment="Top" Height="273" Width="575" AutoGenerateColumns="False" SelectedItem="Binding SelectedRowData" SelectionUnit="FullRow">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding TaskName}"  Width="100" Header="Task Name"/>
+                <DataGridTextColumn Binding="{Binding TaskDescription}" Width="250" Header="Task Description"/>
+                <DataGridTextColumn Binding="{Binding TaskCompleted}" Width="Auto" Header="Completed"/>
+                <DataGridTextColumn Binding="{Binding TaskDate}" Width="auto" Header="Date"/>
+                <DataGridTextColumn Binding="{Binding TaskDays}" Width="87" Header="Days Left"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="button1" Content="Edit Task" HorizontalAlignment="Left" Margin="107,585,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.387,0.433" Click="Edit_Task_Click"/>
+        <Button x:Name="button2" Content="Remove Task" HorizontalAlignment="Left" Margin="607,585,0,0" VerticalAlignment="Top" Width="75"  Click="Remove_Click"/>
+        <Button x:Name="Add_Task" Content="AddTask" HorizontalAlignment="Left" Margin="107,219,0,0" VerticalAlignment="Top" Width="75" Click="Add_Task_Click" RenderTransformOrigin="0.56,4"/>
+        <Button x:Name="refresh" Content="Refresh" HorizontalAlignment="Left" Margin="187,219,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.172,1.334" Click="refresh_click"/>
+        <TextBox x:Name="searchbox" HorizontalAlignment="Left" BorderBrush="Black"  Height="20" Margin="419,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" ToolTip="Search by the Task only"/>
+        <Button x:Name="button3" Content="Search" HorizontalAlignment="Left" Margin="607,218,0,0" VerticalAlignment="Top" Width="75" Click="Search_Click"/>
+        <Button x:Name="SubTask" Content="Create SubTask" HorizontalAlignment="Left" Margin="233,585,0,0" VerticalAlignment="Top" Width="110" Click="SubTask_Click"/>
+        <Button x:Name="ShowSubTasks" Content="Show SubTasks" HorizontalAlignment="Left" Margin="407,585,0,0" VerticalAlignment="Top" Width="117" Click="ShowSubTasks_Click"/>
+    </Grid>
+</Window>

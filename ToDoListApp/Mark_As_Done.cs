@@ -20,7 +20,7 @@ namespace ToDoListApp
         public string Taskdate { set { taskdate = value; }}
         public string Datetask { set { taskname = value; }}
 
-        //Class for Back-end
+        //Class for Back-end database
         public void MarkAsDone()
         {
            

@@ -1,4 +1,5 @@
-To connect to database, you will need to change connection string  in App.config of SQLLite to point to the TestDB.db file. 
+To connect to database, you will need to change connection string  in App.config of SQLLite to point to the TestDB.db file.
+For some reaon it need to be a  UNC path to the database file.
 Example.
 </configSections>
     <connectionStrings>

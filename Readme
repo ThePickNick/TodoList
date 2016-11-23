@@ -1,0 +1,6 @@
+To connect to database, you will need to change connection string  in App.config of SQLLite to point to the TestDB.db file. 
+Example.
+</configSections>
+    <connectionStrings>
+    <add name="DBSQLite" connectionString="Data Source=C:\Users\Tom\Desktop\ToDoListApp\TestDB.db" providerName="System.Data.SQLite"/>
+</connectionStrings>

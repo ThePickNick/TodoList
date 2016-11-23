@@ -1,0 +1,19 @@
+﻿<Window WindowStartupLocation="CenterScreen" x:Class="ToDoListApp.EditTask"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToDoListApp"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" 
+        mc:Ignorable="d"
+        Title="EditTask" Height="500" Width="400">
+    <Grid>
+        <TextBox x:Name="EditTaskName" HorizontalAlignment="Left" Height="23" Margin="58,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261"/>
+        <TextBox x:Name="EditTaskDescription" HorizontalAlignment="Left" Height="79" Margin="58,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261"/>
+        <DatePicker Name="EditTime"  HorizontalAlignment="Left" Margin="58,224,0,0" VerticalAlignment="Top" SelectedDateFormat="Short" IsTodayHighlighted="False" />
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="58,101,0,0" TextWrapping="Wrap" Text="Description of the task" VerticalAlignment="Top" Width="124"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="58,42,0,0" TextWrapping="Wrap" Text="Name of the Task" VerticalAlignment="Top" RenderTransformOrigin="-0.21,1.472" Height="17" Width="102"/>
+        <Button x:Name="SaveTask" Content="Save Task" HorizontalAlignment="Left" Margin="58,272,0,0" VerticalAlignment="Top" Width="75" Click="SaveTask_Click"/>
+
+    </Grid>
+</Window>
